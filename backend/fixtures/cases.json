@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-01-ordinary-site",
+    "jd": "Senior Backend Engineer — Acme Billing\n\nWe are looking for a senior backend engineer to own our rating engine. You will work in Node and Postgres, with some Go at the edges.\n\nRequirements:\n- 5+ years building production services in Node\n- Strong SQL and data modelling, ideally Postgres at scale\n- Experience designing systems that handle high event throughput\n- A track record of mentoring junior engineers\n- Comfortable owning a service end to end, including on-call\n\nBonus points for:\n- Billing, payments or revenue systems experience\n- Kafka or similar streaming infrastructure\n\nYou will join a team of four owning metering and rating. We are remote across the UK and Ireland.",
+    "company_url": "http://localhost:8099/acme/",
+    "days": 5
+  },
+  {
+    "id": "case-02-buried-hiring-page",
+    "jd": "Software Engineer, Planning — Northwind\n\nWe build route and load planning software for regional freight carriers.\n\nWhat we need:\n- Strong algorithms background; you are comfortable with constraint solving or optimisation\n- Experience with mixed-integer programming or similar solvers is essential\n- You can explain a trade-off to a dispatcher who does not care about your model\n- Python and some TypeScript\n\nNice to have:\n- Logistics or supply chain domain knowledge\n- Experience working with legal or regulatory constraints in software\n\nYou will work with two other engineers on the planner itself.",
+    "company_url": "http://localhost:8099/northwind/",
+    "days": 3
+  },
+  {
+    "id": "case-03-no-hiring-page",
+    "jd": "Embedded Systems Engineer — Borealis Instruments\n\nWe make spectrometers that run unattended in the Arctic.\n\nRequirements:\n- 3+ years embedded C on ARM Cortex-M\n- Experience with low-power design and sensor calibration\n- You have debugged hardware you could not physically reach\n\nDesirable:\n- Experience with scientific instrumentation\n- Norwegian language\n\nSmall team, Tromso based, some remote flexibility.",
+    "company_url": "http://localhost:8099/borealis/",
+    "days": 7
+  },
+  {
+    "id": "case-04-unreachable-company",
+    "jd": "Platform Engineer\n\nWe need a platform engineer with strong Kubernetes experience, Terraform, and a background in developer tooling. You should have run production infrastructure and be comfortable with incident response. Experience with Go is a plus.",
+    "company_url": "http://localhost:8099/gone/",
+    "days": 5
+  },
+  {
+    "id": "case-05-two-line-stub",
+    "jd": "Backend engineer wanted. Must know Node.",
+    "company_url": "http://localhost:8099/acme/",
+    "days": 1
+  }
+]

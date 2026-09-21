@@ -1,0 +1,7 @@
+# One origin serves every fixture site, so this is the robots.txt all of them share —
+# which is exactly how it works on a real host.
+User-agent: *
+Allow: /
+# Borealis keeps its interview notes here and asks crawlers not to read them.
+# The crawler must honour this even though the page is the only hiring material on the site.
+Disallow: /borealis/internal/
