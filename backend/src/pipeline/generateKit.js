@@ -129,17 +129,18 @@ export async function generateKit({
     for (const category of GENERATED_CATEGORIES) {
       report('generate', 'started', { category });
       try {
-        addQuestions(
-          await generateQuestionsForCategory({
-            client,
-            category,
-            role,
-            requirements,
-            brief: brief.what_they_do,
-            hiringProcess: brief.hiring_process,
-          }),
-        );
-        report('generate', 'done', { category, questions: questions.length });
+        const produced = await generateQuestionsForCategory({
+          client,
+          category,
+          role,
+          requirements,
+          brief: brief.what_they_do,
+          hiringProcess: brief.hiring_process,
+        });
+        addQuestions(produced);
+        // This category's own count, not the running total — a client showing
+        // "16 questions" beside company-fit would be stating something untrue.
+        report('generate', 'done', { category, questions: produced.length });
       } catch (error) {
         // One category the model could not produce is a gap, recorded and carried forward. The
         // coverage check below sees the shortfall and the kit reports it. Losing a whole kit

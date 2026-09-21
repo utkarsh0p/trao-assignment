@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Design tokens. The single place a colour is defined in this project.
+   Mirrors .claude/docs/DESIGN.md — change both together or neither.
+   ────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Surfaces */
+  --color-bg: #FFFFFF;
+  --color-bg-subtle: #F9FAFB;
+  --color-surface: #FFFFFF;
+  --color-surface-sunken: #F2F4F7;
+  --color-border: #E4E7EC;
+  --color-border-strong: #D0D5DD;
+
+  /* Text */
+  --color-text: #101828;
+  --color-text-muted: #667085;
+  --color-text-faint: #98A2B3;
+
+  /* Accent and status */
+  --color-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-accent-subtle: #EFF6FF;
+  --color-success: #12B76A;
+  --color-success-subtle: #ECFDF3;
+  --color-warn: #F79009;
+  --color-warn-subtle: #FFFAEB;
+  --color-danger: #F04438;
+  --color-danger-subtle: #FEF3F2;
+
+  /* Question categories */
+  --color-cat-technical: #2563EB;
+  --color-cat-technical-subtle: #EFF6FF;
+  --color-cat-behavioural: #F79009;
+  --color-cat-behavioural-subtle: #FFFAEB;
+  --color-cat-systemdesign: #7C3AED;
+  --color-cat-systemdesign-subtle: #F5F3FF;
+  --color-cat-companyfit: #12B76A;
+  --color-cat-companyfit-subtle: #ECFDF3;
+
+  /* Type. System stack only — one less request, no layout shift. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Visible focus on everything. Never outline-none without a replacement. */
+  :focus-visible {
+    outline: none;
+    --tw-ring-offset-width: 2px;
+    box-shadow:
+      0 0 0 var(--tw-ring-offset-width) var(--color-bg),
+      0 0 0 calc(var(--tw-ring-offset-width) + 2px) var(--color-accent);
+    border-radius: 0.5rem;
+  }
+
+  /* Headings carry slightly negative tracking — see DESIGN.md "Type". */
+  h1 { letter-spacing: -0.02em; }
+  h2, h3 { letter-spacing: -0.01em; }
+}
+
+/* Fast and few, and none at all when the reader has asked for none. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
